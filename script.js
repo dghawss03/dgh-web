@@ -79,48 +79,77 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealEls.forEach(el => revealObserver.observe(el));
 
 // ============================
-// CONTACT FORM
+// CONTACT FORM — Formspree: https://formspree.io/f/mpqbegll
 // ============================
-const form = document.getElementById('contactForm');
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mpqbegll';
+
+const form       = document.getElementById('contactForm');
 const successMsg = document.getElementById('formSuccess');
+const errorMsg   = document.getElementById('formError');
+const errorText  = document.getElementById('formErrorMsg');
+const submitBtn  = document.getElementById('submitBtn');
 
 if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Wird gesendet…';
-    btn.disabled = true;
+    // Hide previous feedback
+    successMsg.classList.remove('visible');
+    errorMsg.classList.remove('visible');
 
+    // Loading state
+    submitBtn.textContent = 'Wird gesendet …';
+    submitBtn.disabled = true;
+
+    // Collect all form fields (name, email, service, message)
     const data = new FormData(form);
 
     try {
-      const res = await fetch(form.action, {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         body: data,
-        headers: { 'Accept': 'application/json' }
+        headers: {
+          // Tell Formspree to return JSON instead of redirecting
+          'Accept': 'application/json'
+        }
       });
 
       if (res.ok) {
+        // Success
         form.reset();
-        btn.style.display = 'none';
+        submitBtn.style.display = 'none';
         successMsg.classList.add('visible');
+
+        // Reset after 8 seconds
         setTimeout(() => {
           successMsg.classList.remove('visible');
-          btn.style.display = '';
-          btn.textContent = 'Nachricht senden';
-          btn.disabled = false;
-        }, 6000);
+          submitBtn.style.display = '';
+          submitBtn.textContent = 'Nachricht senden';
+          submitBtn.disabled = false;
+        }, 8000);
+
       } else {
-        const json = await res.json();
-        btn.textContent = json?.errors?.map(e => e.message).join(', ') || 'Fehler beim Senden.';
-        btn.disabled = false;
-        setTimeout(() => { btn.textContent = 'Nachricht senden'; }, 4000);
+        // Formspree returned an error (e.g. form not active, validation)
+        let msg = 'Fehler beim Senden. Bitte erneut versuchen.';
+        try {
+          const json = await res.json();
+          if (json && json.errors && json.errors.length > 0) {
+            msg = json.errors.map(err => err.message).join(' · ');
+          }
+        } catch (_) { /* keep default msg */ }
+
+        if (errorText) errorText.textContent = msg;
+        errorMsg.classList.add('visible');
+        submitBtn.textContent = 'Nachricht senden';
+        submitBtn.disabled = false;
       }
+
     } catch (err) {
-      btn.textContent = 'Verbindungsfehler. Bitte erneut versuchen.';
-      btn.disabled = false;
-      setTimeout(() => { btn.textContent = 'Nachricht senden'; }, 4000);
+      // Network error
+      if (errorText) errorText.textContent = 'Netzwerkfehler — bitte Internetverbindung prüfen.';
+      errorMsg.classList.add('visible');
+      submitBtn.textContent = 'Nachricht senden';
+      submitBtn.disabled = false;
     }
   });
 }
