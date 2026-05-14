@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio — Moderne Webseiten für professionelle Auftritte</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">Studio<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#projekte">Projekte</a></li>
+      <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menü">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mob-link">Über mich</a>
+    <a href="#leistungen" class="mob-link">Leistungen</a>
+    <a href="#projekte" class="mob-link">Projekte</a>
+    <a href="#kontakt" class="mob-link">Kontakt</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="hero-label reveal">Frontend · Design · Web</span>
+        <h1 class="hero-headline reveal">
+          Moderne Webseiten<br />
+          <em>für einen professionellen</em><br />
+          digitalen Auftritt.
+        </h1>
+        <p class="hero-sub reveal">
+          Portfolio- & Business-Seiten, die wirklich überzeugen —<br class="br-desk"/>
+          responsive, modern und individuell auf dich zugeschnitten.
+        </p>
+        <div class="hero-btns reveal">
+          <a href="#projekte" class="btn btn-primary">Projekte ansehen</a>
+          <a href="#kontakt" class="btn btn-ghost">Kontakt aufnehmen</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="browser-mockup">
+          <div class="browser-bar">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+            <div class="browser-url">dein-name.de</div>
+          </div>
+          <div class="browser-content">
+            <div class="mock-nav">
+              <div class="mock-logo-line"></div>
+              <div class="mock-nav-links">
+                <div class="mock-link"></div>
+                <div class="mock-link"></div>
+                <div class="mock-link"></div>
+              </div>
+            </div>
+            <div class="mock-hero">
+              <div class="mock-avatar"></div>
+              <div class="mock-hero-text">
+                <div class="mock-h1"></div>
+                <div class="mock-h1 short"></div>
+                <div class="mock-p"></div>
+                <div class="mock-p short"></div>
+                <div class="mock-btn"></div>
+              </div>
+            </div>
+            <div class="mock-cards">
+              <div class="mock-card"></div>
+              <div class="mock-card"></div>
+              <div class="mock-card"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Verfügbar für neue Projekte
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line-v"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ÜBER MICH -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-left reveal">
+          <span class="section-label">Über mich</span>
+          <h2 class="section-title">Design, das<br /><em>wirklich wirkt.</em></h2>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">10+</span>
+              <span class="stat-text">Projekte umgesetzt</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">100%</span>
+              <span class="stat-text">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-right reveal">
+          <p class="about-text">
+            Ich bin ein Frontend-Designer mit Fokus auf moderne, hochwertige Webseiten — für Privatpersonen, Studenten und kleine Unternehmen.
+          </p>
+          <p class="about-text">
+            Mein Ansatz: klares Design, viel Weißraum, ehrliche Darstellung. Keine überfüllten Seiten, keine Buzzwords — nur digitale Auftritte, die wirklich funktionieren und überzeugen.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Portfolio-Seiten</span>
+            <span class="tag">Business-Websites</span>
+            <span class="tag">Responsive Design</span>
+            <span class="tag">Moderne UI</span>
+            <span class="tag">Digitale Präsenz</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEISTUNGEN -->
+  <section class="leistungen" id="leistungen">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Leistungen</span>
+        <h2 class="section-title">Was ich anbiete.</h2>
+      </div>
+      <div class="leistungen-grid">
+        <div class="leistung-card reveal">
+          <div class="leistung-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Portfolio-Webseiten</h3>
+          <p>Moderne digitale Portfolios für Studenten, Kreative und Professionals — mit Timeline, Skills und Download-Funktionen.</p>
+        </div>
+        <div class="leistung-card reveal">
+          <div class="leistung-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Business-Webseiten</h3>
+          <p>Professionelle Unternehmensseiten für kleine Betriebe, Dienstleister und Freelancer mit klarem Fokus auf Conversion.</p>
+        </div>
+        <div class="leistung-card reveal">
+          <div class="leistung-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3>Responsive Design</h3>
+          <p>Jede Seite funktioniert perfekt auf Smartphone, Tablet und Desktop — ohne Kompromisse beim Design.</p>
+        </div>
+        <div class="leistung-card reveal">
+          <div class="leistung-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Kontaktformulare</h3>
+          <p>Funktionierende Formulare, über die Besucher direkt per E-Mail Kontakt aufnehmen können — zuverlässig und einfach.</p>
+        </div>
+        <div class="leistung-card reveal">
+          <div class="leistung-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h3>Dokumente & Downloads</h3>
+          <p>Lebensläufe, Arbeitszeugnisse und PDFs professionell einbinden und direkt online zum Download bereitstellen.</p>
+        </div>
+        <div class="leistung-card reveal">
+          <div class="leistung-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Eigene Domain</h3>
+          <p>Professionelle individuelle Domain statt generischer Links — ich unterstütze bei Einrichtung und Verknüpfung.</p>
+        </div>
+        <div class="leistung-card reveal">
+          <div class="leistung-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Lebenslauf-Seiten</h3>
+          <p>Interaktive digitale Lebensläufe mit Timeline, Zertifikaten und Berufserfahrung — moderner als jedes PDF.</p>
+        </div>
+        <div class="leistung-card reveal">
+          <div class="leistung-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Moderne UI/UX</h3>
+          <p>Klare Nutzerführung, durchdachte Layouts und visuelle Details, die einen bleibenden ersten Eindruck hinterlassen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJEKTE / SHOWCASE -->
+  <section class="projekte" id="projekte">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Showcase</span>
+        <h2 class="section-title">Projekte, die überzeugen.</h2>
+      </div>
+
+      <!-- PROJEKT 01: LEON HARTMANN -->
+      <div class="projekt-card reveal" data-index="01">
+        <div class="projekt-info">
+          <span class="projekt-num">01</span>
+          <span class="projekt-type">Portfolio · Lebenslauf</span>
+          <h3 class="projekt-title">Leon Hartmann</h3>
+          <p class="projekt-sub">Studentenportfolio</p>
+          <p class="projekt-desc">Moderne Portfolio- und Lebenslaufseite für einen BWL-Studenten — mit professioneller Selbstdarstellung, interaktiver Timeline und Download-Funktion für Dokumente.</p>
+          <ul class="projekt-features">
+            <li>Portraitfoto & Über-mich-Bereich</li>
+            <li>Interaktive Lebenslauf-Timeline</li>
+            <li>Skills & Berufserfahrung</li>
+            <li>Zertifikate & Arbeitszeugnisse als Download</li>
+            <li>Funktionierendes Kontaktformular</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-primary">Ähnliches Projekt anfragen</a>
+        </div>
+        <div class="projekt-visual">
+          <div class="projekt-browser">
+            <div class="browser-bar small">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              <div class="browser-url">leon-hartmann.de</div>
+            </div>
+            <!-- SVG: Leon Hartmann Portfolio Preview -->
+            <svg class="projekt-svg" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
+              <!-- BG -->
+              <rect width="520" height="420" fill="#0f1117"/>
+              <!-- Top nav -->
+              <rect width="520" height="44" fill="#161820"/>
+              <circle cx="28" cy="22" r="10" fill="#2a2d3e"/>
+              <text x="44" y="26" font-size="11" fill="#e0e0f0" font-weight="600" letter-spacing="0.3">Leon Hartmann</text>
+              <text x="330" y="27" font-size="10" fill="#6b7280">Über mich</text>
+              <text x="390" y="27" font-size="10" fill="#6b7280">Lebenslauf</text>
+              <text x="450" y="27" font-size="10" fill="#6b7280">Kontakt</text>
+              <!-- Hero Section -->
+              <rect y="44" width="520" height="130" fill="#12141c"/>
+              <!-- Avatar circle -->
+              <circle cx="72" cy="112" r="40" fill="#1e2235"/>
+              <circle cx="72" cy="100" r="16" fill="#2e3450"/>
+              <ellipse cx="72" cy="128" rx="24" ry="16" fill="#2e3450"/>
+              <!-- Name + role -->
+              <text x="128" y="88" font-size="18" fill="#f0f0ff" font-weight="700" letter-spacing="-0.3">Leon Hartmann</text>
+              <text x="128" y="108" font-size="11" fill="#3b5bdb" font-weight="500">BWL-Student · Universität München</text>
+              <text x="128" y="126" font-size="10" fill="#9ca3af" letter-spacing="0.1">Fokus: Marketing &amp; Strategie</text>
+              <!-- Tags -->
+              <rect x="128" y="136" width="60" height="18" rx="9" fill="#1e2235" stroke="#3b5bdb" stroke-width="0.8"/>
+              <text x="158" y="149" font-size="8.5" fill="#4c6ef5" text-anchor="middle">Analytisch</text>
+              <rect x="196" y="136" width="62" height="18" rx="9" fill="#1e2235" stroke="#374151" stroke-width="0.8"/>
+              <text x="227" y="149" font-size="8.5" fill="#9ca3af" text-anchor="middle">Kommunikativ</text>
+              <rect x="266" y="136" width="54" height="18" rx="9" fill="#1e2235" stroke="#374151" stroke-width="0.8"/>
+              <text x="293" y="149" font-size="8.5" fill="#9ca3af" text-anchor="middle">Teamplayer</text>
+              <!-- Timeline section -->
+              <rect y="184" width="520" height="14" fill="#0f1117"/>
+              <text x="24" y="210" font-size="11" fill="#9ca3af" font-weight="600" letter-spacing="0.08em" text-transform="uppercase">LEBENSLAUF</text>
+              <line x1="120" y1="206" x2="496" y2="206" stroke="#2a2d3e" stroke-width="1"/>
+              <!-- Timeline items -->
+              <circle cx="32" cy="235" r="5" fill="#3b5bdb"/>
+              <line x1="32" y1="240" x2="32" y2="268" stroke="#2a2d3e" stroke-width="1.5"/>
+              <text x="48" y="233" font-size="10" fill="#e0e0f0" font-weight="600">2022 – Heute · BWL-Studium</text>
+              <text x="48" y="248" font-size="9" fill="#6b7280">Ludwig-Maximilians-Universität München</text>
+              <text x="48" y="262" font-size="9" fill="#4b5563">Schwerpunkt: Marketing, Controlling</text>
+
+              <circle cx="32" cy="278" r="5" fill="#2a3580"/>
+              <line x1="32" y1="283" x2="32" y2="311" stroke="#2a2d3e" stroke-width="1.5"/>
+              <text x="48" y="276" font-size="10" fill="#e0e0f0" font-weight="600">2021 – 2022 · Werkstudent</text>
+              <text x="48" y="291" font-size="9" fill="#6b7280">Accenture GmbH, München</text>
+              <text x="48" y="305" font-size="9" fill="#4b5563">Datenanalyse &amp; Berichterstattung</text>
+
+              <circle cx="32" cy="321" r="5" fill="#2a3580"/>
+              <text x="48" y="319" font-size="10" fill="#e0e0f0" font-weight="600">2021 · Abitur</text>
+              <text x="48" y="334" font-size="9" fill="#6b7280">Gymnasium München · Note: 1,6</text>
+              <!-- Skills section -->
+              <rect y="354" width="520" height="66" fill="#12141c"/>
+              <text x="24" y="373" font-size="9" fill="#6b7280" font-weight="600" letter-spacing="0.08em">SKILLS</text>
+              <!-- Skill bars -->
+              <text x="24" y="390" font-size="9" fill="#9ca3af">PowerPoint</text>
+              <rect x="96" y="382" width="80" height="7" rx="3.5" fill="#1e2235"/>
+              <rect x="96" y="382" width="72" height="7" rx="3.5" fill="#3b5bdb"/>
+              <text x="188" y="390" font-size="9" fill="#9ca3af">Excel</text>
+              <rect x="215" y="382" width="80" height="7" rx="3.5" fill="#1e2235"/>
+              <rect x="215" y="382" width="60" height="7" rx="3.5" fill="#3b5bdb"/>
+              <text x="307" y="390" font-size="9" fill="#9ca3af">Englisch</text>
+              <rect x="348" y="382" width="80" height="7" rx="3.5" fill="#1e2235"/>
+              <rect x="348" y="382" width="76" height="7" rx="3.5" fill="#3b5bdb"/>
+              <!-- Download CTA -->
+              <rect x="24" y="400" width="120" height="16" rx="4" fill="#3b5bdb"/>
+              <text x="84" y="412" font-size="8" fill="white" text-anchor="middle" font-weight="500">↓ Lebenslauf herunterladen</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJEKT 02: APEX DETAIL STUDIO -->
+      <div class="projekt-card reverse reveal" data-index="02">
+        <div class="projekt-info">
+          <span class="projekt-num">02</span>
+          <span class="projekt-type">Business · Premium</span>
+          <h3 class="projekt-title">APEX Detail Studio</h3>
+          <p class="projekt-sub">Premium Fahrzeugaufbereitung</p>
+          <p class="projekt-desc">Hochwertige Business-Website für ein professionelles Detailing-Studio — mit Vorher/Nachher-Bereich, Galerie und Kundenbewertungen im Premium-Look.</p>
+          <ul class="projekt-features">
+            <li>Premium Hero-Section mit Fahrzeugfoto</li>
+            <li>Interaktiver Vorher/Nachher-Vergleich</li>
+            <li>Hochwertige Fahrzeuggalerie</li>
+            <li>Leistungsübersicht mit Preisen</li>
+            <li>Kundenbewertungen & funktionierendes Kontaktformular</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-primary">Ähnliches Projekt anfragen</a>
+        </div>
+        <div class="projekt-visual">
+          <div class="projekt-browser">
+            <div class="browser-bar small">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              <div class="browser-url">apex-detail-studio.de</div>
+            </div>
+            <!-- SVG: APEX Premium Detail Studio Preview -->
+            <svg class="projekt-svg" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
+              <!-- Hero BG - dark premium -->
+              <defs>
+                <linearGradient id="apexHero" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#07080d"/>
+                  <stop offset="100%" stop-color="#0e1018"/>
+                </linearGradient>
+                <linearGradient id="carGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1a1c28"/>
+                  <stop offset="100%" stop-color="#0d0e14"/>
+                </linearGradient>
+                <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#c9a227"/>
+                  <stop offset="100%" stop-color="#e8c84a"/>
+                </linearGradient>
+              </defs>
+              <!-- Hero BG -->
+              <rect width="520" height="160" fill="url(#apexHero)"/>
+              <!-- Subtle car shape (abstract) -->
+              <ellipse cx="370" cy="115" rx="130" ry="38" fill="#0f111a" opacity="0.8"/>
+              <rect x="260" y="85" width="240" height="30" rx="6" fill="#12141e"/>
+              <rect x="290" y="78" width="180" height="16" rx="8" fill="#181a26"/>
+              <!-- Car shine effect -->
+              <ellipse cx="420" cy="100" rx="50" ry="8" fill="#1e2236" opacity="0.4"/>
+              <!-- Wheels -->
+              <circle cx="300" cy="128" r="16" fill="#0a0b10" stroke="#222438" stroke-width="2"/>
+              <circle cx="300" cy="128" r="9" fill="#1a1c2a" stroke="#2a2d42" stroke-width="1"/>
+              <circle cx="440" cy="128" r="16" fill="#0a0b10" stroke="#222438" stroke-width="2"/>
+              <circle cx="440" cy="128" r="9" fill="#1a1c2a" stroke="#2a2d42" stroke-width="1"/>
+              <!-- Nav overlay -->
+              <rect width="520" height="38" fill="rgba(7,8,13,0.92)"/>
+              <text x="22" y="24" font-size="13" fill="white" font-weight="700" letter-spacing="1.5">APEX</text>
+              <text x="70" y="24" font-size="13" fill="#c9a227" font-weight="700" letter-spacing="1.5">DETAIL</text>
+              <text x="350" y="24" font-size="9" fill="rgba(255,255,255,0.5)">Leistungen</text>
+              <text x="410" y="24" font-size="9" fill="rgba(255,255,255,0.5)">Galerie</text>
+              <text x="460" y="24" font-size="9" fill="rgba(255,255,255,0.5)">Kontakt</text>
+              <!-- Hero Text -->
+              <text x="22" y="70" font-size="17" fill="white" font-weight="700" letter-spacing="-0.3">Ihr Fahrzeug.</text>
+              <text x="22" y="92" font-size="17" fill="#c9a227" font-weight="700" letter-spacing="-0.3" font-style="italic">Perfektion.</text>
+              <text x="22" y="112" font-size="9" fill="rgba(255,255,255,0.45)">Premium Detailing &amp; Fahrzeugaufbereitung</text>
+              <rect x="22" y="122" width="88" height="22" rx="4" fill="url(#goldGrad)"/>
+              <text x="66" y="137" font-size="8.5" fill="#07080d" text-anchor="middle" font-weight="700">Termin anfragen</text>
+              <!-- Services -->
+              <rect y="160" width="520" height="10" fill="#07080d"/>
+              <text x="22" y="184" font-size="9" fill="#c9a227" font-weight="600" letter-spacing="0.15em">LEISTUNGEN</text>
+              <!-- Service Cards -->
+              <rect x="16" y="192" width="152" height="58" rx="6" fill="#0d0e16" stroke="#1e2030" stroke-width="1"/>
+              <text x="32" y="213" font-size="9" fill="#c9a227">✦</text>
+              <text x="44" y="213" font-size="9.5" fill="#e0e0f0" font-weight="600">Innenreinigung</text>
+              <text x="32" y="228" font-size="8.5" fill="#6b7280">Tiefenreinigung, Lederpflege,</text>
+              <text x="32" y="241" font-size="8.5" fill="#6b7280">Geruchsbeseitigung</text>
+              <text x="32" y="241" font-size="8" fill="#c9a227" x="140">Ab 89 €</text>
+
+              <rect x="176" y="192" width="152" height="58" rx="6" fill="#0d0e16" stroke="#1e2030" stroke-width="1"/>
+              <text x="192" y="213" font-size="9" fill="#c9a227">✦</text>
+              <text x="204" y="213" font-size="9.5" fill="#e0e0f0" font-weight="600">Außenpolitur</text>
+              <text x="192" y="228" font-size="8.5" fill="#6b7280">Lackpolitur, Versiegelung,</text>
+              <text x="192" y="241" font-size="8.5" fill="#6b7280">Nano-Beschichtung</text>
+
+              <rect x="336" y="192" width="168" height="58" rx="6" fill="#0d0e16" stroke="#c9a227" stroke-width="1"/>
+              <text x="352" y="213" font-size="9" fill="#c9a227">★</text>
+              <text x="364" y="213" font-size="9.5" fill="#e0e0f0" font-weight="600">Premium Paket</text>
+              <text x="352" y="228" font-size="8.5" fill="#6b7280">Komplett-Aufbereitung innen</text>
+              <text x="352" y="241" font-size="8.5" fill="#6b7280">&amp; außen — Showroom-Qualität</text>
+              <!-- Before/After -->
+              <rect y="262" width="520" height="10" fill="#07080d"/>
+              <text x="22" y="286" font-size="9" fill="#c9a227" font-weight="600" letter-spacing="0.15em">VORHER / NACHHER</text>
+              <!-- Split image simulation -->
+              <rect x="16" y="294" width="488" height="52" rx="6" fill="#0a0b12"/>
+              <rect x="16" y="294" width="244" height="52" rx="6" fill="#141520" />
+              <text x="138" y="323" font-size="9" fill="#4b5563" text-anchor="middle">Vorher</text>
+              <rect x="260" y="294" width="244" height="52" rx="0 6 6 0" fill="#0e1620"/>
+              <text x="382" y="323" font-size="9" fill="#4c6ef5" text-anchor="middle">Nachher</text>
+              <!-- Divider line -->
+              <line x1="260" y1="294" x2="260" y2="346" stroke="#c9a227" stroke-width="2"/>
+              <circle cx="260" cy="320" r="9" fill="#07080d" stroke="#c9a227" stroke-width="1.5"/>
+              <text x="260" y="324" font-size="9" fill="#c9a227" text-anchor="middle">↔</text>
+              <!-- Reviews -->
+              <rect y="358" width="520" height="62" fill="#07080d"/>
+              <text x="22" y="376" font-size="9" fill="#c9a227" font-weight="600" letter-spacing="0.15em">KUNDENSTIMMEN</text>
+              <rect x="16" y="382" width="230" height="32" rx="5" fill="#0d0e16" stroke="#1e2030" stroke-width="1"/>
+              <text x="28" y="395" font-size="10" fill="#c9a227">★★★★★</text>
+              <text x="28" y="407" font-size="8.5" fill="#6b7280">„Absolut perfekte Arbeit. Mein Auto sieht aus wie neu."</text>
+              <rect x="256" y="382" width="248" height="32" rx="5" fill="#0d0e16" stroke="#1e2030" stroke-width="1"/>
+              <text x="268" y="395" font-size="10" fill="#c9a227">★★★★★</text>
+              <text x="268" y="407" font-size="8.5" fill="#6b7280">„Professionell, pünktlich, top Ergebnis. Sehr empfehlenswert."</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Funktionen</span>
+        <h2 class="section-title">Was deine Seite<br /><em>wirklich kann.</em></h2>
+      </div>
+      <div class="features-grid">
+
+        <!-- FEATURE 1: Kontaktformular -->
+        <div class="feature-card reveal">
+          <div class="feature-screen-wrap">
+            <div class="fs-topbar">
+              <div class="fs-dot-r"></div><div class="fs-dot-y"></div><div class="fs-dot-g"></div>
+              <span class="fs-bar-url">leon-hartmann.de/kontakt</span>
+            </div>
+            <svg class="feature-svg" viewBox="0 0 360 240" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
+              <rect width="360" height="240" fill="#0f1117"/>
+              <!-- Section title -->
+              <text x="24" y="30" font-size="15" fill="#f0f0ff" font-weight="700">Schreib mir.</text>
+              <text x="24" y="47" font-size="9" fill="#6b7280">Ich antworte innerhalb von 24 Stunden.</text>
+              <!-- Name field -->
+              <text x="24" y="68" font-size="8.5" fill="#9ca3af" font-weight="500" letter-spacing="0.05em">NAME</text>
+              <rect x="24" y="73" width="312" height="26" rx="5" fill="#161820" stroke="#2a2d3e" stroke-width="1"/>
+              <text x="36" y="90" font-size="9" fill="#374151">Max Mustermann</text>
+              <!-- Email field -->
+              <text x="24" y="114" font-size="8.5" fill="#9ca3af" font-weight="500" letter-spacing="0.05em">E-MAIL</text>
+              <rect x="24" y="119" width="312" height="26" rx="5" fill="#161820" stroke="#3b5bdb" stroke-width="1.2"/>
+              <text x="36" y="136" font-size="9" fill="#6b7280">max@email.de</text>
+              <!-- Focus glow -->
+              <rect x="24" y="119" width="312" height="26" rx="5" fill="none" stroke="#3b5bdb" stroke-width="1.2" opacity="0.3"/>
+              <!-- Message field -->
+              <text x="24" y="160" font-size="8.5" fill="#9ca3af" font-weight="500" letter-spacing="0.05em">NACHRICHT</text>
+              <rect x="24" y="165" width="312" height="44" rx="5" fill="#161820" stroke="#2a2d3e" stroke-width="1"/>
+              <text x="36" y="182" font-size="9" fill="#374151">Ich interessiere mich für eine Portfolio-</text>
+              <text x="36" y="196" font-size="9" fill="#374151">Webseite für meine Bewerbungen.</text>
+              <!-- Send button -->
+              <rect x="24" y="220" width="136" height="14" rx="4" fill="#3b5bdb"/>
+              <text x="92" y="230" font-size="8" fill="white" text-anchor="middle" font-weight="600">Nachricht senden →</text>
+            </svg>
+          </div>
+          <div class="feature-info">
+            <h3>Funktionierende Kontaktformulare</h3>
+            <p>Besucher können direkt Kontakt aufnehmen. Nachrichten werden per E-Mail weitergeleitet — zuverlässig und ohne technischen Aufwand.</p>
+          </div>
+        </div>
+
+        <!-- FEATURE 2: Dokumente & Downloads -->
+        <div class="feature-card reveal">
+          <div class="feature-screen-wrap">
+            <div class="fs-topbar">
+              <div class="fs-dot-r"></div><div class="fs-dot-y"></div><div class="fs-dot-g"></div>
+              <span class="fs-bar-url">leon-hartmann.de/dokumente</span>
+            </div>
+            <svg class="feature-svg" viewBox="0 0 360 240" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
+              <rect width="360" height="240" fill="#0f1117"/>
+              <text x="24" y="30" font-size="15" fill="#f0f0ff" font-weight="700">Meine Dokumente</text>
+              <text x="24" y="47" font-size="9" fill="#6b7280">Alle Unterlagen als Download verfügbar.</text>
+              <!-- Doc 1 -->
+              <rect x="24" y="58" width="312" height="44" rx="6" fill="#161820" stroke="#2a2d3e" stroke-width="1"/>
+              <rect x="38" y="68" width="22" height="28" rx="3" fill="#1e2235" stroke="#3b5bdb" stroke-width="1"/>
+              <text x="49" y="84" font-size="7" fill="#4c6ef5" text-anchor="middle" font-weight="700">PDF</text>
+              <text x="72" y="74" font-size="9.5" fill="#e0e0f0" font-weight="600">Lebenslauf_Leon_Hartmann.pdf</text>
+              <text x="72" y="88" font-size="8" fill="#6b7280">Aktueller Lebenslauf · 142 KB</text>
+              <rect x="294" y="66" width="30" height="22" rx="4" fill="#3b5bdb"/>
+              <text x="309" y="81" font-size="8" fill="white" text-anchor="middle">↓</text>
+              <!-- Doc 2 -->
+              <rect x="24" y="110" width="312" height="44" rx="6" fill="#161820" stroke="#2a2d3e" stroke-width="1"/>
+              <rect x="38" y="120" width="22" height="28" rx="3" fill="#1e2235" stroke="#3b5bdb" stroke-width="1"/>
+              <text x="49" y="136" font-size="7" fill="#4c6ef5" text-anchor="middle" font-weight="700">PDF</text>
+              <text x="72" y="126" font-size="9.5" fill="#e0e0f0" font-weight="600">Arbeitszeugnis_Accenture.pdf</text>
+              <text x="72" y="140" font-size="8" fill="#6b7280">Arbeitszeugnis 2022 · 98 KB</text>
+              <rect x="294" y="118" width="30" height="22" rx="4" fill="#3b5bdb"/>
+              <text x="309" y="133" font-size="8" fill="white" text-anchor="middle">↓</text>
+              <!-- Doc 3 -->
+              <rect x="24" y="162" width="312" height="44" rx="6" fill="#161820" stroke="#2a2d3e" stroke-width="1"/>
+              <rect x="38" y="172" width="22" height="28" rx="3" fill="#1e2235" stroke="#3b5bdb" stroke-width="1"/>
+              <text x="49" y="188" font-size="7" fill="#4c6ef5" text-anchor="middle" font-weight="700">PDF</text>
+              <text x="72" y="178" font-size="9.5" fill="#e0e0f0" font-weight="600">Zertifikat_Marketing_IHK.pdf</text>
+              <text x="72" y="192" font-size="8" fill="#6b7280">IHK-Zertifikat 2023 · 67 KB</text>
+              <rect x="294" y="170" width="30" height="22" rx="4" fill="#3b5bdb"/>
+              <text x="309" y="185" font-size="8" fill="white" text-anchor="middle">↓</text>
+              <!-- Note -->
+              <text x="24" y="225" font-size="8" fill="#4b5563">3 Dokumente verfügbar · Zuletzt aktualisiert: Nov 2024</text>
+            </svg>
+          </div>
+          <div class="feature-info">
+            <h3>Dokumente & Downloads</h3>
+            <p>Lebensläufe, Arbeitszeugnisse und PDFs direkt online bereitstellen und professionell zum Download anbieten.</p>
+          </div>
+        </div>
+
+        <!-- FEATURE 3: Domain -->
+        <div class="feature-card reveal">
+          <div class="feature-screen-wrap">
+            <div class="fs-topbar">
+              <div class="fs-dot-r"></div><div class="fs-dot-y"></div><div class="fs-dot-g"></div>
+              <div class="fs-url-bar">
+                <div class="fs-lock">
+                  <svg viewBox="0 0 16 16" fill="none"><path d="M12 7H4v7h8V7z" stroke="#28c840" stroke-width="1.2"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="#28c840" stroke-width="1.2"/></svg>
+                </div>
+                <span class="fs-url-text">leon-hartmann.de</span>
+              </div>
+            </div>
+            <svg class="feature-svg" viewBox="0 0 360 240" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
+              <rect width="360" height="240" fill="#0f1117"/>
+              <!-- Domain comparison: generic vs own -->
+              <text x="24" y="28" font-size="10" fill="#6b7280" font-weight="500">Ohne eigene Domain</text>
+              <rect x="24" y="36" width="312" height="28" rx="5" fill="#1a1c28" stroke="#2a2d3e" stroke-width="1"/>
+              <text x="36" y="53" font-size="9" fill="#4b5563">carrd.co/u/leon-h-bwl-muenchen-2023</text>
+              <rect x="296" y="43" width="28" height="14" rx="3" fill="#1e2030"/>
+              <text x="310" y="53" font-size="7" fill="#6b7280" text-anchor="middle">Teilen</text>
+
+              <!-- Arrow down -->
+              <text x="180" y="86" font-size="16" fill="#3b5bdb" text-anchor="middle">↓</text>
+              <text x="180" y="100" font-size="8.5" fill="#6b7280" text-anchor="middle">Mit eigener Domain</text>
+
+              <!-- Own domain - highlighted -->
+              <rect x="24" y="108" width="312" height="40" rx="5" fill="#161c2e" stroke="#3b5bdb" stroke-width="1.5"/>
+              <!-- Green lock -->
+              <text x="36" y="130" font-size="10" fill="#28c840">🔒</text>
+              <text x="54" y="124" font-size="10.5" fill="#e0e0f0" font-weight="600">leon-hartmann.de</text>
+              <text x="54" y="140" font-size="8.5" fill="#6b7280">Persönlich · Professionell · Unvergesslich</text>
+              <rect x="290" y="118" width="34" height="18" rx="4" fill="#3b5bdb"/>
+              <text x="307" y="131" font-size="7.5" fill="white" text-anchor="middle">Live ✓</text>
+
+              <!-- Benefits -->
+              <line x1="24" y1="162" x2="336" y2="162" stroke="#1e2235" stroke-width="1"/>
+              <text x="24" y="180" font-size="9" fill="#4c6ef5">✓</text>
+              <text x="36" y="180" font-size="9" fill="#9ca3af">Professionelle E-Mail: leon@leon-hartmann.de</text>
+              <text x="24" y="198" font-size="9" fill="#4c6ef5">✓</text>
+              <text x="36" y="198" font-size="9" fill="#9ca3af">Leicht zu merken und weiterzugeben</text>
+              <text x="24" y="216" font-size="9" fill="#4c6ef5">✓</text>
+              <text x="36" y="216" font-size="9" fill="#9ca3af">Ab ca. 12 € / Jahr — ich helfe bei Einrichtung</text>
+            </svg>
+          </div>
+          <div class="feature-info">
+            <h3>Eigene professionelle Domain</h3>
+            <p>Professionelle individuelle Domains statt einfacher Standardlinks — für einen bleibenden ersten Eindruck.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WARUM MODERNE WEBSEITEN -->
+  <section class="warum" id="warum">
+    <div class="container">
+      <div class="warum-inner">
+        <div class="warum-left reveal">
+          <span class="section-label">Warum modern?</span>
+          <h2 class="section-title">Dein erster Eindruck<br /><em>zählt.</em></h2>
+          <p class="warum-text">In einer Welt, in der alles online stattfindet, ist deine Webseite dein wichtigstes Aushängeschild. Nicht deine E-Mail. Nicht dein LinkedIn-Profil. Deine Seite.</p>
+        </div>
+        <div class="warum-right">
+          <div class="warum-item reveal">
+            <div class="warum-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Professioneller erster Eindruck</strong>
+              <p>Besucher entscheiden in Sekunden. Dein Design zeigt, wer du bist — noch bevor du ein Wort gesagt hast.</p>
+            </div>
+          </div>
+          <div class="warum-item reveal">
+            <div class="warum-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <strong>Vertrauen schaffen</strong>
+              <p>Eine hochwertige Webseite signalisiert Seriosität — bei Bewerbungen, Kunden und Geschäftspartnern.</p>
+            </div>
+          </div>
+          <div class="warum-item reveal">
+            <div class="warum-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            </div>
+            <div>
+              <strong>Überall erreichbar</strong>
+              <p>Smartphone, Tablet, Desktop — deine Seite sieht auf jedem Gerät perfekt aus und funktioniert zuverlässig.</p>
+            </div>
+          </div>
+          <div class="warum-item reveal">
+            <div class="warum-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <strong>Eigene digitale Adresse</strong>
+              <p>Mit deiner persönlichen Domain bist du online gefunden — professionell, direkt, unvergesslich.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="kontakt" id="kontakt">
+    <div class="container">
+      <div class="kontakt-inner">
+        <div class="kontakt-left reveal">
+          <span class="section-label">Kontakt</span>
+          <h2 class="section-title">Lass uns dein<br /><em>Projekt starten.</em></h2>
+          <p class="kontakt-sub">Erzähl mir von deiner Idee — ich melde mich innerhalb von 24 Stunden.</p>
+          <div class="kontakt-info">
+            <a href="mailto:hello@studio.de" class="kontakt-link">hello@studio.de</a>
+          </div>
+        </div>
+        <div class="kontakt-right reveal">
+          <form class="kontakt-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Dein Name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email" placeholder="deine@email.de" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Nachricht</label>
+              <textarea id="message" name="message" placeholder="Was hast du dir vorgestellt?" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Nachricht senden</button>
+            <div class="form-success" id="formSuccess">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Nachricht gesendet — ich melde mich bald!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">Studio<span class="dot">.</span></a>
+          <p>Moderne Webseiten für einen professionellen digitalen Auftritt.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <span class="footer-col-title">Navigation</span>
+            <a href="#about">Über mich</a>
+            <a href="#leistungen">Leistungen</a>
+            <a href="#projekte">Projekte</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-title">Rechtliches</span>
+            <a href="#" id="imprintLink">Impressum</a>
+            <a href="#" id="privacyLink">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Studio. Alle Rechte vorbehalten.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- IMPRESSUM MODAL -->
+  <div class="modal" id="imprintModal">
+    <div class="modal-backdrop" id="imprintBackdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="imprintClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h2>Impressum</h2>
+      <p><strong>Angaben gemäß § 5 TMG</strong></p>
+      <p>Max Mustermann<br />Musterstraße 1<br />12345 Musterstadt</p>
+      <p><strong>Kontakt</strong><br />E-Mail: hello@studio.de</p>
+      <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</strong><br />Max Mustermann, Anschrift wie oben</p>
+      <p class="modal-note">Bitte ersetze diese Platzhalterangaben mit deinen echten Daten.</p>
+    </div>
+  </div>
+
+  <!-- DATENSCHUTZ MODAL -->
+  <div class="modal" id="privacyModal">
+    <div class="modal-backdrop" id="privacyBackdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="privacyClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h2>Datenschutzerklärung</h2>
+      <p><strong>1. Verantwortlicher</strong><br />Max Mustermann, Musterstraße 1, 12345 Musterstadt</p>
+      <p><strong>2. Erhebung von Daten</strong><br />Diese Webseite erhebt beim Ausfüllen des Kontaktformulars folgende Daten: Name, E-Mail-Adresse und Nachricht. Diese Daten werden ausschließlich zur Bearbeitung deiner Anfrage verwendet.</p>
+      <p><strong>3. Weitergabe an Dritte</strong><br />Formulardaten werden über den Dienst Formspree (formspree.io) verarbeitet. Weitere Informationen: <a href="https://formspree.io/legal/privacy-policy" target="_blank">Formspree Datenschutz</a>.</p>
+      <p><strong>4. Deine Rechte</strong><br />Du hast das Recht auf Auskunft, Berichtigung und Löschung deiner Daten. Kontakt: hello@studio.de</p>
+      <p class="modal-note">Bitte ersetze diese Platzhalterangaben mit deinen echten Daten und lasse diese Erklärung im Zweifel von einem Anwalt prüfen.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
