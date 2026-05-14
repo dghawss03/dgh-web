@@ -544,6 +544,38 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex-shrink: 0;
 }
 
+/* Button-Gruppe pro Projekt */
+.projekt-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Live-ansehen Button — klein, dezent, clean */
+.btn-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--light);
+  border: 1px solid var(--dark-4);
+  background: transparent;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.btn-live svg { flex-shrink: 0; opacity: 0.7; transition: opacity 0.2s; }
+.btn-live:hover {
+  color: var(--pure);
+  border-color: var(--muted);
+  transform: translateY(-1px);
+}
+.btn-live:hover svg { opacity: 1; }
+
 /* ===========================
    SHOWCASE BROWSER FRAME
    =========================== */

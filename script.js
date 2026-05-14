@@ -146,7 +146,7 @@ if (form) {
 
     } catch (err) {
       // Network error
-      if (errorText) errorText.textContent = 'Netzwerkfehler — bitte Internetverbindung prüfen.';
+      if (errorText) errorText.textContent = 'Netzwerkfehler, bitte Internetverbindung prüfen.';
       errorMsg.classList.add('visible');
       submitBtn.textContent = 'Nachricht senden';
       submitBtn.disabled = false;
