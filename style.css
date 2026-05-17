@@ -393,11 +393,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   max-width: 220px;
 }
 
-.browser-content { padding: 20px; }
+/* browser-content padding is set in the cursor block below */
 .mock-nav { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; }
 .mock-logo-line { width:60px; height:10px; background:var(--dark-4); border-radius:3px; }
 .mock-nav-links { display:flex; gap:10px; }
-.mock-link { width:36px; height:7px; background:var(--dark-4); border-radius:3px; }
+.mock-link { width:36px; height:7px; background:var(--dark-4); border-radius:3px; transition: background 0.15s; }
+.mock-link--active { background: var(--accent-light) !important; }
 .mock-hero { display:flex; gap:16px; align-items:center; margin-bottom:20px; padding:16px; background:var(--dark-3); border-radius:var(--radius-sm); }
 .mock-avatar { width:52px; height:52px; border-radius:50%; background:linear-gradient(135deg,var(--accent-dim),var(--dark-4)); flex-shrink:0; }
 .mock-hero-text { flex:1; }
@@ -407,7 +408,58 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .mock-p.short { width:60%; }
 .mock-btn { width:72px; height:22px; background:var(--accent-dim); border:1px solid var(--accent); border-radius:4px; margin-top:12px; }
 .mock-cards { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
-.mock-card { height:48px; background:var(--dark-3); border-radius:var(--radius-xs); border:1px solid var(--dark-4); }
+.mock-card { height:48px; background:var(--dark-3); border-radius:var(--radius-xs); border:1px solid var(--dark-4); transition: background 0.15s; }
+.mock-card.mock-card--active { background: var(--dark-4); border-color: var(--accent-dim); }
+
+/* ===========================
+   ANIMIERTER CURSOR IM HERO-MOCKUP
+   =========================== */
+.browser-content { position: relative; overflow: hidden; padding: 20px; }
+
+.mock-cursor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transform: translate(20px, 20px); /* Startposition oben links, wird per JS überschrieben */
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.mock-cursor svg {
+  display: block;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5));
+}
+
+/* Click-Ripple */
+.mock-cursor-ripple {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+.mock-cursor-ripple.ripple-active {
+  animation: cursorRipple 0.45s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+}
+@keyframes cursorRipple {
+  0%   { transform: scale(0);   opacity: 0.8; }
+  60%  { transform: scale(2.8); opacity: 0.4; }
+  100% { transform: scale(4);   opacity: 0; }
+}
+
+/* Button leuchtet beim Klick kurz auf */
+.mock-btn { transition: background 0.15s, border-color 0.15s; }
+.mock-btn.mock-btn--clicked {
+  background: rgba(59,91,219,0.35);
+  border-color: var(--accent-light);
+}
 
 .hero-badge {
   display: inline-flex;

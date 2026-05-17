@@ -6,8 +6,71 @@
 'use strict';
 
 // ============================
-// NAV SCROLL BEHAVIOR
+// HERO MOCKUP — ANIMIERTER CURSOR (Loop)
 // ============================
+(function initMockCursor() {
+  const cursor = document.getElementById('mockCursor');
+  const ripple = document.getElementById('mockRipple');
+  if (!cursor || !ripple) return;
+
+  // Klick-Sequenz: Element-ID + welche CSS-Klasse kurz dran kommt
+  const sequence = [
+    { id: 'mockNav2',  cls: 'mock-link--active'  },
+    { id: 'mockNav3',  cls: 'mock-link--active'  },
+    { id: 'mockBtn',   cls: 'mock-btn--clicked'  },
+    { id: 'mockCard0', cls: 'mock-card--active'  },
+    { id: 'mockCard2', cls: 'mock-card--active'  },
+    { id: 'mockNav1',  cls: 'mock-link--active'  },
+    { id: 'mockBtn',   cls: 'mock-btn--clicked'  },
+    { id: 'mockCard1', cls: 'mock-card--active'  },
+  ];
+
+  let step = 0;
+
+  function moveCursorTo(el) {
+    const container = cursor.parentElement; // .browser-content
+    const cRect = container.getBoundingClientRect();
+    const eRect = el.getBoundingClientRect();
+
+    // Cursor-Spitze zeigt auf obere-linke Ecke des Elements + kleiner Offset
+    const x = eRect.left - cRect.left + 6;
+    const y = eRect.top  - cRect.top  + 4;
+
+    cursor.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  function fireRipple() {
+    ripple.classList.remove('ripple-active');
+    void ripple.offsetWidth;
+    ripple.classList.add('ripple-active');
+  }
+
+  function runStep() {
+    const { id, cls } = sequence[step];
+    const el = document.getElementById(id);
+    if (!el) { step = (step + 1) % sequence.length; return; }
+
+    // 1. Cursor bewegen
+    moveCursorTo(el);
+
+    // 2. Nach Transition-Ende (700ms) klicken
+    setTimeout(() => {
+      fireRipple();
+      el.classList.add(cls);
+      setTimeout(() => el.classList.remove(cls), 400);
+    }, 750);
+
+    step = (step + 1) % sequence.length;
+  }
+
+  // Erst starten wenn Reveal-Animation durch ist
+  setTimeout(() => {
+    runStep();
+    setInterval(runStep, 2000);
+  }, 1800);
+})();
+
+
 const nav = document.getElementById('nav');
 
 window.addEventListener('scroll', () => {
