@@ -122,9 +122,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const revealEls = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // Stagger siblings within same parent
       const siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal:not(.visible)'));
       const sibIdx = siblings.indexOf(entry.target);
       const delay = Math.min(sibIdx * 80, 320);
@@ -135,8 +134,8 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.1,
-  rootMargin: '0px 0px -40px 0px'
+  threshold: 0.05,
+  rootMargin: '0px 0px 0px 0px'   // kein negativer Offset — alles im Viewport wird sofort ausgelöst
 });
 
 revealEls.forEach(el => revealObserver.observe(el));

@@ -119,22 +119,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ===========================
    REVEAL / FADE-IN ANIMATION
-   Sections gleiten sauber von unten rein,
-   leichtes Blur löst sich auf
    =========================== */
 .reveal {
   opacity: 0;
-  transform: translateY(32px);
-  filter: blur(4px);
+  transform: translateY(28px);
   transition:
     opacity   0.75s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.75s cubic-bezier(0.4, 0, 0.2, 1),
-    filter    0.75s cubic-bezier(0.4, 0, 0.2, 1);
+    transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
-  filter: blur(0px);
 }
 
 /* ===========================
