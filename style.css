@@ -92,36 +92,49 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--accent);
   color: var(--pure);
   border: 1.5px solid var(--accent);
+  transition: background var(--transition), border-color var(--transition),
+              transform var(--transition), box-shadow var(--transition);
 }
 .btn-primary:hover {
   background: var(--accent-light);
   border-color: var(--accent-light);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(59, 91, 219, 0.4),
+              0 0 0 1px rgba(76, 110, 245, 0.15);
 }
 .btn-ghost {
   background: transparent;
   color: var(--light);
   border: 1.5px solid var(--dark-4);
+  transition: border-color var(--transition), color var(--transition),
+              transform var(--transition), box-shadow var(--transition);
 }
 .btn-ghost:hover {
   border-color: var(--muted);
   color: var(--pure);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 .btn-full { width: 100%; justify-content: center; }
 
 /* ===========================
-   REVEAL ANIMATION
+   REVEAL / FADE-IN ANIMATION
+   Sections gleiten sauber von unten rein,
+   leichtes Blur löst sich auf
    =========================== */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1),
-              transform 0.7s cubic-bezier(0.4,0,0.2,1);
+  transform: translateY(32px);
+  filter: blur(4px);
+  transition:
+    opacity   0.75s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+    filter    0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0px);
 }
 
 /* ===========================
@@ -151,8 +164,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 500;
   color: var(--pure);
   letter-spacing: 0.02em;
+  transition: text-shadow var(--transition);
 }
-/* .dot retained for any legacy usage but no longer on nav-logo */
+.nav-logo:hover {
+  text-shadow: 0 0 18px rgba(76, 110, 245, 0.5);
+}
 .dot { color: var(--accent-light); }
 
 .nav-links {
@@ -165,8 +181,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 400;
   color: var(--muted);
   transition: color var(--transition);
+  position: relative;
+}
+/* Underline-Glow beim Hover */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-light);
+  box-shadow: 0 0 6px var(--accent-light);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-links a:hover { color: var(--pure); }
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
 .nav-links a.active { color: var(--pure); }
 
 .nav-cta {
@@ -175,11 +206,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 9px 22px;
   border-radius: var(--radius-xs);
   font-weight: 500 !important;
+  box-shadow: 0 0 0 rgba(59, 91, 219, 0);
+  transition: background var(--transition), transform var(--transition),
+              box-shadow var(--transition) !important;
 }
 .nav-cta:hover {
   background: var(--accent-light) !important;
   transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(59, 91, 219, 0.4) !important;
 }
+.nav-cta::after { display: none !important; }
 
 .nav-burger {
   display: none;
@@ -1143,4 +1179,183 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-btns { flex-direction: column; }
   .hero-btns .btn { width: 100%; justify-content: center; }
   .modal-box { padding: 28px 20px; }
+}
+
+/* ═══════════════════════════════════════════
+   GLOW & HOVER UPGRADES
+   Subtil, premium, nie übertrieben
+   ═══════════════════════════════════════════ */
+
+/* ── Hero Browser-Mockup: sanfter blauer Glow ── */
+.browser-mockup {
+  transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              transform  0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-visual:hover .browser-mockup {
+  box-shadow: 0 40px 80px rgba(0,0,0,0.55),
+              0 0 0   1px rgba(255,255,255,0.05),
+              0 0 60px rgba(59, 91, 219, 0.12);
+  transform: translateY(-4px);
+}
+
+/* ── Leistungen-Karten: Glow beim Hover ── */
+.leistung-card {
+  transition: border-color var(--transition),
+              background   var(--transition),
+              transform    var(--transition),
+              box-shadow   var(--transition);
+}
+.leistung-card:hover {
+  border-color: rgba(59, 91, 219, 0.35);
+  background: var(--dark-3);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.3),
+              0 0 0   1px rgba(59, 91, 219, 0.1),
+              inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.leistung-icon {
+  transition: color var(--transition), filter var(--transition);
+}
+.leistung-card:hover .leistung-icon {
+  filter: drop-shadow(0 0 8px rgba(76, 110, 245, 0.5));
+}
+
+/* ── Showcase-Browser: Hover-Lift mit Glow ── */
+.showcase-browser {
+  transition: transform    0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow   0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s;
+}
+.showcase-browser:hover {
+  transform: translateY(-5px) scale(1.005);
+  box-shadow: 0 0 0   1px rgba(255,255,255,0.07),
+              0 40px 80px rgba(0,0,0,0.5),
+              0 0 80px rgba(59, 91, 219, 0.1);
+  border-color: rgba(59, 91, 219, 0.2);
+}
+
+/* ── Feature-Karten: Icon-Glow ── */
+.feat-card {
+  transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s;
+}
+.feat-card:hover {
+  border-color: rgba(59,91,219,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.35),
+              0 0 0 1px rgba(59, 91, 219, 0.08);
+}
+
+/* ── Section-Label: subtiler Glow-Punkt davor ── */
+.section-label {
+  position: relative;
+}
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width:  5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  box-shadow: 0 0 8px var(--accent-light),
+              0 0 16px rgba(76, 110, 245, 0.4);
+  margin-right: 8px;
+  vertical-align: middle;
+  margin-top: -1px;
+}
+
+/* ── About-Stats: Zahlen glühen beim Hover ── */
+.stat {
+  transition: transform var(--transition);
+}
+.stat:hover { transform: translateY(-2px); }
+.stat:hover .stat-num {
+  text-shadow: 0 0 20px rgba(76, 110, 245, 0.4);
+}
+.stat-num {
+  transition: text-shadow var(--transition);
+}
+
+/* ── Warum-Items: linker Akzent-Glow ── */
+.warum-item {
+  transition: border-color var(--transition),
+              transform    var(--transition),
+              box-shadow   var(--transition);
+}
+.warum-item:hover {
+  border-color: rgba(59,91,219,0.35);
+  transform: translateX(5px);
+  box-shadow: -4px 0 20px rgba(59, 91, 219, 0.08),
+               0  0  0   1px rgba(59, 91, 219, 0.06);
+}
+.warum-icon {
+  transition: filter var(--transition);
+}
+.warum-item:hover .warum-icon {
+  filter: drop-shadow(0 0 8px rgba(76, 110, 245, 0.5));
+}
+
+/* ── btn-live: subtiler Glow ── */
+.btn-live:hover {
+  color: var(--pure);
+  border-color: var(--muted);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+/* ── Kontaktformular: Focus-Glow ── */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 91, 219, 0.12),
+              0 0 16px rgba(59, 91, 219, 0.06);
+}
+
+/* ── Footer-Links: Glow beim Hover ── */
+.footer-col a {
+  transition: color var(--transition), text-shadow var(--transition);
+}
+.footer-col a:hover {
+  color: var(--accent-light);
+  text-shadow: 0 0 12px rgba(76, 110, 245, 0.3);
+}
+
+/* ── Scrollbar-Thumb: Glow ── */
+::-webkit-scrollbar-thumb {
+  background: var(--dark-4);
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+  box-shadow: 0 0 6px rgba(59, 91, 219, 0.4);
+}
+
+/* ── Hero-Hintergrund: animierter Glow-Orb ── */
+.hero::before {
+  animation: heroOrb 8s ease-in-out infinite alternate;
+}
+@keyframes heroOrb {
+  0%   { opacity: 0.6; transform: scale(1)    translate(0, 0); }
+  50%  { opacity: 1;   transform: scale(1.15) translate(-3%, 2%); }
+  100% { opacity: 0.7; transform: scale(0.95) translate(2%, -3%); }
+}
+
+/* ── Projekt-Karten: Nummer Glow ── */
+.projekt-num {
+  transition: color var(--transition), text-shadow var(--transition);
+}
+.projekt-card:hover .projekt-num {
+  color: rgba(59, 91, 219, 0.15);
+  text-shadow: 0 0 40px rgba(59, 91, 219, 0.2);
+}
+
+/* Reduced-motion: alle Animationen abschalten für Nutzer die das bevorzugen */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    filter: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .hero::before { animation: none; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
