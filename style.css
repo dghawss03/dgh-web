@@ -1354,3 +1354,90 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero::before { animation: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* ═══════════════════════════════════════════
+   MODAL — MINIMALISTISCHES REDESIGN
+   ═══════════════════════════════════════════ */
+
+/* Überschreibt die Standard-modal-box für die neue Version */
+.modal-box--minimal {
+  padding: 44px 40px 40px;
+  max-width: 520px;
+}
+
+/* Kleines Label über der Überschrift */
+.modal-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+
+/* Titelzeile */
+.modal-box--minimal h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--pure);
+  line-height: 1.15;
+  margin-bottom: 0;
+}
+
+/* Feine Trennlinie */
+.modal-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--dark-4);
+  margin: 24px 0;
+}
+
+/* Inhalt-Block */
+.modal-block {
+  margin-bottom: 28px;
+}
+.modal-block:last-child {
+  margin-bottom: 0;
+}
+
+/* Block-Titel */
+.modal-block-title {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+
+/* Block-Text */
+.modal-block p {
+  font-size: 0.9rem;
+  color: var(--light);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Links */
+.modal-block a {
+  color: var(--accent-light);
+  transition: color var(--transition);
+}
+.modal-block a:hover {
+  color: var(--pure);
+}
+
+/* Hinweis-Block ganz unten — dezent, keine gelbe Box */
+.modal-block--note {
+  padding-top: 20px;
+  border-top: 1px solid var(--dark-3);
+  margin-top: 4px;
+}
+.modal-block--note p {
+  font-size: 0.78rem;
+  color: var(--mid);
+  line-height: 1.65;
+}
